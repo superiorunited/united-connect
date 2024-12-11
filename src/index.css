@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    opacity: 0;
+    animation: fade-up 0.5s ease-out forwards;
+  }
+  
+  .animate-fade-up-delay-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-fade-up-delay-2 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-fade-up-delay-3 {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input, textarea {
+  @apply border-gray-300 focus:ring-blue-500 focus:border-blue-500;
+}
