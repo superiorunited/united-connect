@@ -56,7 +56,7 @@ export default function About() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <p className="text-lg text-white leading-relaxed">
               United Connect is designed for experienced professionals in the manufacturing industry, 
-              offering a unique opportunity to transform your connections into substantial financial rewards. 
+              offering a unique opportunity to transform your connections into substantial recurring income. 
               Whether you're a recently retired executive or an industry veteran, your network has incredible value, 
               and we'll help you realize its potential.
             </p>

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook, X, Instagram } from 'lucide-react';
 import { useState } from 'react';
 import { sendEmail } from '../utils/email';
 
@@ -180,8 +180,8 @@ export default function Apply() {
                 <a href="https://www.facebook.com/unitedstaffsource" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
                   <Facebook className="h-6 w-6" />
                 </a>
-                <a href="https://twitter.com/gounitedstaff" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
-                  <Twitter className="h-6 w-6" />
+                <a href="https://x.com/UnitedStaff" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
+                  <X className="h-6 w-6" />
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
                   <Instagram className="h-6 w-6" />

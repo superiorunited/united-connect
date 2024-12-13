@@ -10,6 +10,10 @@ import Apply from './components/Apply';
 import AboutPage from './components/AboutPage';
 import FAQPage from './components/FAQPage';
 import Footer from './components/Footer';
+import PartnerLogin from './components/PartnerLogin';
+import PartnerResources from './components/PartnerResources';
+import PartnerGuide from './components/PartnerGuide';
+import ReferralProcess from './components/ReferralProcess';
 
 function ScrollToHashElement() {
   const location = useLocation();
@@ -38,7 +42,6 @@ function HomePage() {
       <Benefits />
       <Success />
       <Apply />
-      <Footer />
     </>
   );
 }
@@ -47,13 +50,20 @@ function App() {
   return (
     <Router>
       <ScrollToHashElement />
-      <div className="min-h-screen">
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about-us" element={<AboutPage />} />
-          <Route path="/faq" element={<FAQPage />} />
-        </Routes>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/partner-login" element={<PartnerLogin />} />
+            <Route path="/resources" element={<PartnerResources />} />
+            <Route path="/partner-guide" element={<PartnerGuide />} />
+            <Route path="/referral-process" element={<ReferralProcess />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
