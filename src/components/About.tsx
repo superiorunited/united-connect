@@ -1,5 +1,4 @@
 import { Network, Clock, DollarSign } from 'lucide-react';
-import unitedint from '../assets/unitedint.webp';
 
 const features = [
   {
@@ -22,13 +21,6 @@ const features = [
 export default function About() {
   return (
     <div id="about" className="py-24 bg-white">
-      <div className="relative h-[400px] w-full mb-16">
-        <img
-          src={unitedint}
-          alt="United Staff Source Hero"
-          className="w-full h-full object-cover"
-        />
-      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
