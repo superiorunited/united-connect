@@ -1,6 +1,6 @@
 import { Building2, Users, Target, Network } from 'lucide-react';
-import Footer from './Footer';
 import { Link } from 'react-router-dom';
+import unitedint from '../assets/unitedint.webp';
 
 const features = [
   {
@@ -29,20 +29,20 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative bg-blue-900 text-white pt-16">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
-            <div className="absolute inset-0 bg-blue-900/90" />
-          </div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-3xl animate-fade-up">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <div className="relative h-[500px] w-full">
+        <img
+          src={unitedint}
+          alt="United Staff Source Hero"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/60" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About United Staff Source
             </h1>
-            <p className="text-xl text-blue-100">
-              Your Partner in Connecting Talent with Opportunity
+            <p className="text-xl text-gray-200 max-w-3xl">
+              Your trusted partner in automotive industry staffing, connecting exceptional talent with leading manufacturers.
             </p>
           </div>
         </div>
@@ -109,7 +109,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

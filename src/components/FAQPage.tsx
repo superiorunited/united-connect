@@ -1,7 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
 import { faqData } from '../data/faqData';
 
 interface FAQItemProps {
@@ -79,7 +78,6 @@ export default function FAQPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
