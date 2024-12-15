@@ -1,6 +1,6 @@
 import { Building2, Users, Target, Network } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import unitedint from '../assets/unitedint.webp';
+import { unitedint } from '../assets';
 
 const features = [
   {
