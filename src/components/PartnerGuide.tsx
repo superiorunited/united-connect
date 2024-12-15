@@ -27,11 +27,12 @@ export default function PartnerGuide() {
   ];
 
   const emergingRoles = [
-    { icon: Car, title: 'EV Powertrain Engineers' },
+    { icon: Car, title: 'Automotive Software Engineers' },
     { icon: Bot, title: 'Autonomous Vehicle Software Developers' },
-    { icon: Battery, title: 'Battery Technology Specialists' },
+    { icon: Battery, title: 'Vehicle Connectivity Engineers' },
     { icon: Shield, title: 'Automotive Cybersecurity Experts' },
     { icon: BrainCircuit, title: 'AI/ML Engineers for Automotive' },
+    { icon: MessageSquare, title: 'Human-Machine Interface (HMI) Designers' },
   ];
 
   return (
@@ -144,7 +145,7 @@ export default function PartnerGuide() {
                 <h3 className="text-xl font-semibold mb-4">AI-Powered Candidate Screening</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Machine learning algorithms for precise matching</li>
-                  <li>• Reduced bias in candidate selection</li>
+                  <li>• 20% faster candidate evaluation</li>
                   <li>• 40% more efficient shortlisting</li>
                 </ul>
               </div>
