@@ -15,7 +15,7 @@ export default function Hero() {
             Your Network, Your Legacy: Build Enduring Financial Growth
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Join United Connect and leverage your professional expertise to connect top-tier talent with leading automotive manufacturers, all while building a growing stream of recurring income.
+            Join United Connect and leverage your professional expertise to connect top-tier talent with leading manufacturers, all while building a growing stream of recurring income.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 

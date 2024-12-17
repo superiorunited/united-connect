@@ -4,7 +4,7 @@ const steps = [
   {
     icon: <Users className="h-12 w-12 text-blue-600" />,
     title: "Refer Clients",
-    description: "Introduce us to automotive manufacturers or suppliers in need of recruiting services."
+    description: "Introduce us to manufacturers or suppliers in need of recruiting services."
   },
   {
     icon: <CheckCircle className="h-12 w-12 text-blue-600" />,

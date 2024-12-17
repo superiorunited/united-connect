@@ -10,11 +10,11 @@ const benefits = [
     ]
   },
   {
-    title: "Performance Bonuses",
+    title: "Annual Performance Bonuses",
     items: [
-      "Refer 3 clients: $5,000 bonus",
-      "Refer 5 clients: $10,000 bonus",
-      "Refer 10 clients: $20,000 or luxury trip"
+      "Refer 3 clients: Additional 5% bonus",
+      "Refer 5 clients: Additional 6% bonus",
+      "Refer 10 clients: Additional 7% bonus"
     ]
   },
   {
