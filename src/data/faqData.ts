@@ -13,6 +13,26 @@ export const faqData: FAQSection[] = [
     title: "About the Program",
     items: [
       {
+        question: "Where can I refer clients, or what countries can I refer clients from?",
+        answer: "You can refer clients in all English-speaking countries currently."
+      },
+      {
+        question: "Will recommending your services create a conflict of interest in my industry?",
+        answer: "Not at all. Most of our consultants refer companies within their industry vertical but avoid direct competitors. For example, an OEM employee may refer talent to one of their Tier 1 suppliers. It's a win-win for everyone involved!"
+      },
+      {
+        question: "Do I need automotive industry experience?",
+        answer: "No, while we focus heavily on manufacturing, we work across multiple industries. Let us know your area of expertise, and we'll see if there's an opportunity available for your specialty."
+      },
+      {
+        question: "Can I refer candidates I know as well as companies?",
+        answer: "Absolutely! As an industry expert, your candidate recommendations are highly valued, and there are additional earning opportunities for successful candidate referrals."
+      },
+      {
+        question: "Is there any cost to join the program?",
+        answer: "No, never. There are no fees or costs to join the program—just opportunities to earn by leveraging your expertise and connections."
+      },
+      {
         question: "What is United Connect?",
         answer: "United Connect by United Staff Source allows experienced professionals in the manufacturing and automotive industries to leverage their networks by referring companies in need of recruiting services. In return, partners earn substantial income for successful referrals and ongoing placements."
       },
@@ -56,7 +76,7 @@ export const faqData: FAQSection[] = [
       },
       {
         question: "Are there additional performance incentives?",
-        answer: "Yes! Our tiered bonuses include:\n• Refer 3 clients in a year: Additional $5,000.\n• Refer 5 clients in a year: Additional $10,000.\n• Refer 10 clients in a year: All-expenses-paid trip or $20,000 bonus."
+        answer: "Yes! There are additional annual performance bonuses based on the number of clients that you refer."
       },
       {
         question: "Is there a limit to how much I can earn?",

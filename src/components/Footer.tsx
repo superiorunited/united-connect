@@ -1,4 +1,4 @@
-import { Phone, MapPin, Linkedin, Facebook, Instagram, X } from 'lucide-react';
+import { Phone, MapPin, Linkedin, Facebook, Instagram, X, ExternalLink } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { logo } from '../assets';
 
@@ -46,6 +46,17 @@ export default function Footer() {
               <li>
                 <a href={getLink('#how-it-works')} className="text-gray-400 hover:text-white transition">
                   How It Works
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://unitedstaffsource.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition inline-flex items-center"
+                >
+                  United Staff Source
+                  <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </li>
               <li>

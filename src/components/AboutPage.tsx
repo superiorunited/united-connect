@@ -1,4 +1,4 @@
-import { Building2, Users, Target, Network } from 'lucide-react';
+import { Building2, Users, Target, Network, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { unitedint } from '../assets';
 
@@ -41,9 +41,18 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About United Staff Source
             </h1>
-            <p className="text-xl text-gray-200 max-w-3xl">
+            <p className="text-xl text-gray-200 max-w-3xl mb-8">
               Your trusted partner in automotive industry staffing, connecting exceptional talent with leading manufacturers.
             </p>
+            <a
+              href="https://unitedstaffsource.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition"
+            >
+              Visit United Staff Source
+              <ExternalLink className="ml-2 h-5 w-5" />
+            </a>
           </div>
         </div>
       </div>

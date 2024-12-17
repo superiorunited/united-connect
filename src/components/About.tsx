@@ -13,7 +13,7 @@ const features = [
   },
   {
     icon: <DollarSign className="h-8 w-8 text-blue-600" />,
-    title: 'Lucrative Rewards',
+    title: 'Value-Driven Compensation',
     description: 'Earn substantial commissions and ongoing bonuses for successful referrals.'
   }
 ];

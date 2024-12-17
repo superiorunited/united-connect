@@ -15,7 +15,13 @@ import {
   Battery,
   Shield,
   Bot,
-  ArrowLeft
+  ArrowLeft,
+  Factory,
+  CheckSquare,
+  Wrench,
+  TrendingUp,
+  HardHat,
+  ClipboardCheck
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -33,6 +39,15 @@ export default function PartnerGuide() {
     { icon: Shield, title: 'Automotive Cybersecurity Experts' },
     { icon: BrainCircuit, title: 'AI/ML Engineers for Automotive' },
     { icon: MessageSquare, title: 'Human-Machine Interface (HMI) Designers' },
+  ];
+
+  const traditionalRoles = [
+    { icon: Factory, title: 'Plant Managers' },
+    { icon: CheckSquare, title: 'Quality Management Leaders' },
+    { icon: Wrench, title: 'Production Managers' },
+    { icon: TrendingUp, title: 'Turnaround Specialists' },
+    { icon: HardHat, title: 'Operations Directors' },
+    { icon: ClipboardCheck, title: 'Process Improvement Managers' },
   ];
 
   return (
@@ -191,18 +206,79 @@ export default function PartnerGuide() {
           </div>
         </div>
 
-        {/* 5. Emerging Roles */}
-        <div className="mt-16">
+        {/* 5. Market Focus */}
+        <div className="mt-24">
           <div className="lg:text-center">
-            <Users className="h-12 w-12 text-blue-600 mx-auto" />
-            <h2 className="mt-2 text-2xl font-bold text-gray-900">Emerging Technology Role Focus</h2>
+            <h2 className="text-3xl font-bold text-gray-900">
+              Market Focus
+            </h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+              Our specialized focus on the manufacturing sector allows us to understand and address unique industry challenges.
+            </p>
           </div>
-          <div className="mt-5 bg-white rounded-lg shadow px-6 py-8">
-            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-16">
+            <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-4">Industry Segments</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• OEM Manufacturers</li>
+                  <li>• Tier 1 Suppliers</li>
+                  <li>• Tier 2 Suppliers</li>
+                  <li>• Technology Providers</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-4">Geographic Focus</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Major Manufacturing Hubs</li>
+                  <li>• Emerging Tech Centers</li>
+                  <li>• Regional Development Zones</li>
+                  <li>• Global Operations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Roles Section */}
+        <div className="mt-24">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">
+            High-Demand Positions
+          </h2>
+          
+          {/* Emerging Roles */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
+              Emerging Technology Roles
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {emergingRoles.map((role, index) => (
-                <div key={index} className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-                  <role.icon className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-900 font-medium">{role.title}</span>
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <role.icon className="h-8 w-8 text-blue-600 mb-4" />
+                  <h4 className="text-lg font-medium text-gray-900">{role.title}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Traditional Roles */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
+              Core Manufacturing Roles
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {traditionalRoles.map((role, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <role.icon className="h-8 w-8 text-blue-600 mb-4" />
+                  <h4 className="text-lg font-medium text-gray-900">{role.title}</h4>
                 </div>
               ))}
             </div>
