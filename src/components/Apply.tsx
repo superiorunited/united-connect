@@ -140,7 +140,7 @@ export default function Apply() {
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
                   <span className="font-medium mr-2">•</span>
-                  Retired or experienced professionals in manufacturing, supply chain, or automotive sectors
+                  Individuals currently employed or retired from the manufacturing, supply chain, or automotive sectors.
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">•</span>

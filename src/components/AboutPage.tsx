@@ -1,6 +1,6 @@
 import { Building2, Users, Target, Network, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { unitedint } from '../assets';
+import { ussreception } from '../assets';
 
 const features = [
   {
@@ -31,12 +31,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <img
-          src={unitedint}
+          src={ussreception}
           alt="United Staff Source Hero"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/60" />
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 flex items-center -translate-y-[10%]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About United Staff Source

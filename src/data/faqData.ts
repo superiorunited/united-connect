@@ -55,7 +55,7 @@ export const faqData: FAQSection[] = [
     items: [
       {
         question: "How does the referral process work?",
-        answer: "1. Submit a Referral: Provide the company's name, a contact person, and any relevant details.\n2. We Handle the Rest: United Staff Source contacts the company, assesses their hiring needs, and manages the recruitment process.\n3. Earn Rewards: You'll earn commissions for successful placements and bonuses tied to the client's ongoing activity with us."
+        answer: "1. Submit a Referral: Provide the company's name, a contact person, and any relevant details.\n2. We Handle the Rest: United Staff Source contacts the company, assesses their hiring needs, and manages the recruitment process.\n3. Earn Fees: You'll earn commissions for successful placements and bonuses tied to the client's ongoing activity with us."
       },
       {
         question: "What information do I need to submit a referral?",
@@ -93,7 +93,7 @@ export const faqData: FAQSection[] = [
       },
       {
         question: "Who do I contact if I have questions?",
-        answer: "For more information or assistance, contact our team at:\nPhone: 888-655-0030\nAddress: 600 W. 6th Street, Fourth Floor, Fort Worth, TX 76102"
+        answer: "For more information or assistance, contact our team at unitedconnect@unitedstaffsource.com"
       }
     ]
   }

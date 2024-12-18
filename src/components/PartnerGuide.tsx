@@ -21,9 +21,16 @@ import {
   Wrench,
   TrendingUp,
   HardHat,
-  ClipboardCheck
+  ClipboardCheck,
+  Building2,
+  Cog,
+  Globe2,
+  MapPin,
+  Building,
+  Package
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { partnersuccess1 } from '../assets';
 
 export default function PartnerGuide() {
   const metrics = [
@@ -52,26 +59,37 @@ export default function PartnerGuide() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
-        <div className="mb-8">
-          <Link
-            to="/resources"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Back to Resources
-          </Link>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-6">
+        <Link
+          to="/resources"
+          className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          <ArrowLeft className="h-5 w-5 mr-2" />
+          Back to Resources
+        </Link>
+      </div>
 
-        <div className="text-center">
-          <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Best Practices for Recruiting Clients
-          </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            A comprehensive guide for United Connect partners
-          </p>
+      <div className="relative h-[500px] w-full">
+        <img
+          src={partnersuccess1}
+          alt="Partner Success"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/60" />
+        <div className="absolute inset-0 flex items-center -translate-y-[10%]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Best Practices for Recruiting Clients
+              
+            </h1>
+            <p className="text-xl text-gray-200 max-w-3xl mb-8">
+              A comprehensive guide for United Connect partners
+            </p>
+          </div>
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         {/* 1. Network Strategy */}
         <div className="mt-16">
           <div className="lg:text-center">
@@ -124,17 +142,33 @@ export default function PartnerGuide() {
             <h2 className="mt-2 text-2xl font-bold text-gray-900">Position the Value of United Staff Source</h2>
           </div>
           <div className="mt-5 bg-white rounded-lg shadow px-6 py-8">
-            <h3 className="text-xl font-semibold mb-4">Key Differentiators</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
-                <span className="text-gray-600">Deep understanding of automotive industry dynamics</span>
-              </li>
-              <li className="flex items-start">
-                <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
-                <span className="text-gray-600">Specialized in recruiting for emerging automotive technologies</span>
-              </li>
-            </ul>
+            <h3 className="text-xl font-semibold mb-4 text-center">Key Differentiators</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
+                  <span className="text-gray-600">Deep understanding of automotive industry dynamics</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
+                  <span className="text-gray-600">Specialized in recruiting for emerging automotive technologies</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
+                  <span className="text-gray-600">Global reach allows seamless talent sourcing across borders</span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
+                  <span className="text-gray-600">Unrivaled network of top-tier automotive professionals across all levels and disciplines</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 text-blue-600 mr-2">•</span>
+                  <span className="text-gray-600">Smart use of AI technology to continuously improve sourcing, skills matching, and behavioral analysis</span>
+                </div>
+              </div>
+            </div>
 
             <div className="mt-8 grid gap-6 grid-cols-1 md:grid-cols-3">
               {metrics.map((metric, index) => (
@@ -156,57 +190,63 @@ export default function PartnerGuide() {
           </div>
           <div className="mt-5 bg-white rounded-lg shadow px-6 py-8">
             <div className="grid gap-8 md:grid-cols-2">
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-semibold mb-4">AI-Powered Candidate Screening</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Machine learning algorithms for precise matching</li>
-                  <li>• 20% faster candidate evaluation</li>
-                  <li>• 40% more efficient shortlisting</li>
+                <ul className="space-y-2 text-gray-600 list-none">
+                  <li>Machine learning algorithms for precise matching</li>
+                  <li>20% faster candidate evaluation</li>
+                  <li>40% more efficient shortlisting</li>
                 </ul>
               </div>
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-semibold mb-4">Predictive Analytics</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Forecast workforce trends</li>
-                  <li>• Identify potential skill gaps</li>
-                  <li>• Proactive talent strategies</li>
+                <ul className="space-y-2 text-gray-600 list-none">
+                  <li>Forecast workforce trends</li>
+                  <li>Identify potential skill gaps</li>
+                  <li>Proactive talent strategies</li>
                 </ul>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Digital Outreach Templates</h3>
-              <div className="space-y-6">
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <div className="flex items-center mb-2">
-                    <Linkedin className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="font-medium">LinkedIn Connection Request</span>
-                  </div>
-                  <p className="text-gray-600">
-                    "Hi [Name], I noticed your expertise in [specific automotive domain]. Our specialized recruiting team at United Staff Source is revolutionizing talent acquisition in the automotive technology space. Interested in exploring how we're reshaping recruitment?"
-                  </p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <div className="flex items-center mb-2">
-                    <Mail className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="font-medium">Follow-up Email Template</span>
-                  </div>
-                  <p className="text-sm text-gray-500 mb-2">Subject: Innovative Talent Solutions for [Company/Industry Segment]</p>
-                  <p className="text-gray-600">
-                    "Hi [Name],<br/><br/>
-                    In the rapidly evolving automotive landscape, finding top-tier talent in EV design, autonomous systems, and advanced manufacturing is crucial. United Staff Source offers:<br/>
-                    • Targeted recruitment for emerging technological roles<br/>
-                    • AI-enhanced candidate matching<br/>
-                    • Data-driven placement strategies<br/><br/>
-                    Would you be open to a 15-minute insights call?"
-                  </p>
-                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 5. Market Focus */}
+        {/* 5. Digital Outreach */}
+        <div className="mt-16">
+          <div className="lg:text-center">
+            <MessageSquare className="h-12 w-12 text-blue-600 mx-auto" />
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">Digital Outreach Templates</h2>
+          </div>
+          <div className="mt-5 bg-white rounded-lg shadow px-6 py-8">
+            <div className="space-y-6">
+              <div className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center mb-2">
+                  <Linkedin className="h-5 w-5 text-blue-600 mr-2" />
+                  <span className="font-medium">LinkedIn Connection Request</span>
+                </div>
+                <p className="text-gray-600">
+                  "Hi [Name], I noticed your expertise in [specific automotive domain]. Our specialized recruiting team at United Staff Source is revolutionizing talent acquisition in the automotive technology space. Interested in exploring how we're reshaping recruitment?"
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center mb-2">
+                  <Mail className="h-5 w-5 text-blue-600 mr-2" />
+                  <span className="font-medium">Follow-up Email Template</span>
+                </div>
+                <p className="text-sm text-gray-500 mb-2">Subject: Innovative Talent Solutions for [Company/Industry Segment]</p>
+                <p className="text-gray-600">
+                  "Hi [Name],<br/><br/>
+                  In the rapidly evolving automotive landscape, finding top-tier talent in EV design, autonomous systems, and advanced manufacturing is crucial. United Staff Source offers:<br/>
+                  • Targeted recruitment for emerging technological roles<br/>
+                  • AI-enhanced candidate matching<br/>
+                  • Data-driven placement strategies<br/><br/>
+                  Would you be open to a 15-minute insights call?"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 6. Market Focus */}
         <div className="mt-24">
           <div className="lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900">
@@ -221,21 +261,45 @@ export default function PartnerGuide() {
             <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Industry Segments</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• OEM Manufacturers</li>
-                  <li>• Tier 1 Suppliers</li>
-                  <li>• Tier 2 Suppliers</li>
-                  <li>• Technology Providers</li>
+                <ul className="space-y-4 text-gray-600">
+                  <li className="flex items-center">
+                    <Factory className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>OEM Manufacturers</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Car className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Tier 1 Suppliers</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Cog className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Tier 2 Suppliers</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Package className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Technology Providers</span>
+                  </li>
                 </ul>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Geographic Focus</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Major Manufacturing Hubs</li>
-                  <li>• Emerging Tech Centers</li>
-                  <li>• Regional Development Zones</li>
-                  <li>• Global Operations</li>
+                <ul className="space-y-4 text-gray-600">
+                  <li className="flex items-center">
+                    <Building2 className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Major Manufacturing Hubs</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Building className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Emerging Tech Centers</span>
+                  </li>
+                  <li className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Regional Development Zones</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Globe2 className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span>Global Operations</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -285,7 +349,7 @@ export default function PartnerGuide() {
           </div>
         </div>
 
-        {/* 6. Client Approach */}
+        {/* 7. Client Approach */}
         <div className="mt-16">
           <div className="lg:text-center">
             <MessageSquare className="h-12 w-12 text-blue-600 mx-auto" />
@@ -317,7 +381,7 @@ export default function PartnerGuide() {
           </div>
         </div>
 
-        {/* 7. Objection Handling */}
+        {/* 8. Objection Handling */}
         <div className="mt-16">
           <div className="lg:text-center">
             <ShieldAlert className="h-12 w-12 text-blue-600 mx-auto" />
@@ -348,7 +412,7 @@ export default function PartnerGuide() {
           </div>
         </div>
 
-        {/* 8. Pro Tips */}
+        {/* 9. Pro Tips */}
         <div className="mt-16">
           <div className="lg:text-center">
             <Lightbulb className="h-12 w-12 text-blue-600 mx-auto" />
