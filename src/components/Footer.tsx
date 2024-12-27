@@ -74,6 +74,11 @@ export default function Footer() {
                   Partner Login
                 </Link>
               </li>
+              <li>
+                <Link to="/press" className="text-gray-400 hover:text-white transition">
+                  Press
+                </Link>
+              </li>
             </ul>
           </div>
 
