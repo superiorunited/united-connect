@@ -3,7 +3,8 @@ import emailjs from '@emailjs/browser';
 // EmailJS credentials
 const PUBLIC_KEY = 'Wa3XCXB0ylCwU5XR8';
 const SERVICE_ID = 'service_z9lvdxf';
-const TEMPLATE_ID = 'template_xw8zn68';
+const REFERRAL_TEMPLATE_ID = 'template_xw8zn68';
+const PARTNER_APPLICATION_TEMPLATE_ID = 'template_snwepl7';
 
 // Initialize EmailJS with your public key
 emailjs.init(PUBLIC_KEY);
@@ -42,9 +43,14 @@ export const sendEmail = async (templateParams: EmailParams) => {
       }
     });
 
+    // Select template ID based on form type
+    const templateId = templateParams.form_type === 'Partner Application' 
+      ? PARTNER_APPLICATION_TEMPLATE_ID 
+      : REFERRAL_TEMPLATE_ID;
+
     const response = await emailjs.sendForm(
       SERVICE_ID,
-      TEMPLATE_ID,
+      templateId,
       form,
       PUBLIC_KEY
     );
