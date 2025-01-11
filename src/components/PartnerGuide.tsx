@@ -27,14 +27,30 @@ import {
   Globe2,
   MapPin,
   Building,
-  Package
+  Package,
+  HelpCircle
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { partnersuccess1 } from '../assets';
+import aisLogo from '../assets/UPC Logos/ais.svg';
+import amLogo from '../assets/UPC Logos/am.svg';
+import apLogo from '../assets/UPC Logos/ap.svg';
+import avgLogo from '../assets/UPC Logos/avg.svg';
+import epcLogo from '../assets/UPC Logos/epc.svg';
+import fLogo from '../assets/UPC Logos/f.svg';
+import intLogo from '../assets/UPC Logos/int.svg';
+import lmLogo from '../assets/UPC Logos/lm.svg';
+import matLogo from '../assets/UPC Logos/mat.svg';
+import mitLogo from '../assets/UPC Logos/mit.svg';
+import pmLogo from '../assets/UPC Logos/pm.svg';
+import rshLogo from '../assets/UPC Logos/rsh.svg';
+import valLogo from '../assets/UPC Logos/val.svg';
 
 export default function PartnerGuide() {
+  const navigate = useNavigate();
   const metrics = [
-    { label: 'Average time-to-hire', value: '35 days', subtext: '20% faster than industry average' },
+    { label: 'Average time-to-hire', value: '13.7 Days', subtext: 'up to 30% faster than competitors' },
     { label: 'Quality of hire success rate', value: '92%', subtext: 'retention after 12 months' },
     { label: 'Cost-per-hire reduction', value: '30%', subtext: 'compared to traditional methods' },
   ];
@@ -60,13 +76,15 @@ export default function PartnerGuide() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-6">
-        <Link
-          to="/resources"
-          className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-        >
-          <ArrowLeft className="h-5 w-5 mr-2" />
-          Back to Resources
-        </Link>
+        <div className="mb-8">
+          <Link
+            to="/resources"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            <ArrowLeft className="h-5 w-5 mr-2" />
+            Back to Resources
+          </Link>
+        </div>
       </div>
 
       <div className="relative h-[500px] w-full">
@@ -79,7 +97,7 @@ export default function PartnerGuide() {
         <div className="absolute inset-0 flex items-center -translate-y-[10%]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Best Practices for Recruiting Clients
+              Best Practices for Referring Clients
               
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mb-8">
@@ -248,60 +266,85 @@ export default function PartnerGuide() {
 
         {/* 6. Market Focus */}
         <div className="mt-24">
-          <div className="lg:text-center">
-            <h2 className="text-3xl font-bold text-gray-900">
-              Market Focus
-            </h2>
-            <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-              Our specialized focus on the manufacturing sector allows us to understand and address unique industry challenges.
-            </p>
+          <h2 className="text-3xl font-bold text-gray-900">
+            Market Focus
+          </h2>
+          <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+            Our specialized focus on the manufacturing sector allows us to understand and address unique industry challenges.
+          </p>
+        </div>
+
+        <div className="mt-16">
+          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Industry Segments</h3>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-center">
+                  <Factory className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>OEM Manufacturers</span>
+                </li>
+                <li className="flex items-center">
+                  <Car className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Tier 1 Suppliers</span>
+                </li>
+                <li className="flex items-center">
+                  <Cog className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Tier 2 Suppliers</span>
+                </li>
+                <li className="flex items-center">
+                  <Package className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Technology Providers</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Geographic Focus</h3>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-center">
+                  <Building2 className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Major Manufacturing Hubs</span>
+                </li>
+                <li className="flex items-center">
+                  <Building className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Emerging Tech Centers</span>
+                </li>
+                <li className="flex items-center">
+                  <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Regional Development Zones</span>
+                </li>
+                <li className="flex items-center">
+                  <Globe2 className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span>Global Operations</span>
+                </li>
+              </ul>
+            </div>
           </div>
+        </div>
 
-          <div className="mt-16">
-            <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Industry Segments</h3>
-                <ul className="space-y-4 text-gray-600">
-                  <li className="flex items-center">
-                    <Factory className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>OEM Manufacturers</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Car className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Tier 1 Suppliers</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Cog className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Tier 2 Suppliers</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Package className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Technology Providers</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Geographic Focus</h3>
-                <ul className="space-y-4 text-gray-600">
-                  <li className="flex items-center">
-                    <Building2 className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Major Manufacturing Hubs</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Building className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Emerging Tech Centers</span>
-                  </li>
-                  <li className="flex items-center">
-                    <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Regional Development Zones</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Globe2 className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                    <span>Global Operations</span>
-                  </li>
-                </ul>
-              </div>
+        {/* Engagements Section */}
+        <div className="mt-24">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">
+            Engagements
+          </h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">
+              The companies listed below may not be available for referrals as they are either under contract with us or actively engaged in our sales process.
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center p-4">
+              <img src={aisLogo} alt="AIS Logo" className="h-12 w-auto object-contain" />
+              <img src={amLogo} alt="AM Logo" className="h-16 w-auto object-contain" />
+              <img src={apLogo} alt="AP Logo" className="h-24 w-auto object-contain" />
+              <img src={avgLogo} alt="AVG Logo" className="h-12 w-auto object-contain" />
+              <img src={epcLogo} alt="EPC Logo" className="h-12 w-auto object-contain" />
+              <img src={fLogo} alt="F Logo" className="h-12 w-auto object-contain" />
+              <img src={intLogo} alt="INT Logo" className="h-12 w-auto object-contain" />
+              <img src={lmLogo} alt="LM Logo" className="h-12 w-auto object-contain" />
+              <img src={matLogo} alt="MAT Logo" className="h-12 w-auto object-contain" />
+              <img src={mitLogo} alt="MIT Logo" className="h-12 w-auto object-contain" />
+              <img src={pmLogo} alt="PM Logo" className="h-24 w-auto object-contain" />
+              <img src={rshLogo} alt="RSH Logo" className="h-24 w-auto object-contain" />
+              <img src={valLogo} alt="VAL Logo" className="h-12 w-auto object-contain" />
             </div>
           </div>
         </div>
@@ -321,10 +364,12 @@ export default function PartnerGuide() {
               {emergingRoles.map((role, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-start"
                 >
-                  <role.icon className="h-8 w-8 text-blue-600 mb-4" />
-                  <h4 className="text-lg font-medium text-gray-900">{role.title}</h4>
+                  <div className="w-full flex items-center gap-3">
+                    <role.icon className="h-8 w-8 text-blue-600 flex-shrink-0" />
+                    <h4 className="text-lg font-medium text-gray-900">{role.title}</h4>
+                  </div>
                 </div>
               ))}
             </div>
@@ -339,10 +384,12 @@ export default function PartnerGuide() {
               {traditionalRoles.map((role, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-start"
                 >
-                  <role.icon className="h-8 w-8 text-blue-600 mb-4" />
-                  <h4 className="text-lg font-medium text-gray-900">{role.title}</h4>
+                  <div className="w-full flex items-center gap-3">
+                    <role.icon className="h-8 w-8 text-blue-600 flex-shrink-0" />
+                    <h4 className="text-lg font-medium text-gray-900">{role.title}</h4>
+                  </div>
                 </div>
               ))}
             </div>
@@ -438,6 +485,95 @@ export default function PartnerGuide() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-24">
+          <div className="lg:text-center">
+            <HelpCircle className="h-12 w-12 text-blue-600 mx-auto" />
+            <h2 className="mt-2 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+              Common questions about our partner program and how it works
+            </p>
+          </div>
+          
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="space-y-8">
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">Is there a limit to how many referrals I can make?</h3>
+                <p className="mt-2 text-gray-600">
+                  There is no limit to the number of referrals you can make. We encourage partners to refer any qualified opportunities that align with our expertise in the automotive and manufacturing sectors.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">What is the compensation structure?</h3>
+                <p className="mt-2 text-gray-600">
+                  • First Placement Commission: Earn 20% of the placement fee for the first hire made with any referred client.<br />
+                  • Ongoing Revenue Bonus: Receive 5% of the gross annual billings from your referred client every year they remain active with United Staff Source.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">Are there additional performance incentives?</h3>
+                <p className="mt-2 text-gray-600">
+                  Yes! There are additional annual performance bonuses based on the number of clients that you refer.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">Is there a limit to how much I can earn?</h3>
+                <p className="mt-2 text-gray-600">
+                  No, there are no earning caps. The more referrals you provide, and the more successful placements we make, the more you earn.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">How does the referral process work?</h3>
+                <p className="mt-2 text-gray-600">
+                  Our referral process is straightforward. Once you identify a potential client, simply submit their information through our <a href="https://unitedpartnerconnect.com/referral-process" className="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">partner portal</a>. Our team will reach out within 24 hours and keep you updated on the progress. You'll receive compensation for successful placements.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">What types of positions do you typically fill?</h3>
+                <p className="mt-2 text-gray-600">
+                  We specialize in automotive and manufacturing positions across all levels, from skilled technicians to executive leadership. This includes roles in engineering, operations, quality control, and management.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">How long does it typically take to fill a position?</h3>
+                <p className="mt-2 text-gray-600">
+                  Our average time-to-fill is 13.7 days, which is up to 30% faster than competitors. However, the exact timeline can vary based on the position's requirements and market conditions.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">Will I need to be present for the client meeting?</h3>
+                <p className="mt-2 text-gray-600">
+                  Yes, you will need to be present for the initial introduction meeting. After that, our team will handle all ongoing communications and meetings with the client directly.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900">Who do I contact for support?</h3>
+                <p className="mt-2 text-gray-600">
+                  Your Program Relationship Manager, who helped you through the sign-up process, will be your primary point of contact for any questions or support needs. They are dedicated to ensuring your success in the program and are available to assist you throughout your partnership journey.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link
+            to="/resources"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            <ArrowLeft className="h-5 w-5 mr-2" />
+            Back to Resources
+          </Link>
         </div>
       </div>
     </div>

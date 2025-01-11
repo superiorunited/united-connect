@@ -11,10 +11,11 @@ import AboutPage from './components/AboutPage';
 import FAQPage from './components/FAQPage';
 import Footer from './components/Footer';
 import PartnerLogin from './components/PartnerLogin';
-import PartnerResources from './components/PartnerResources';
 import PartnerGuide from './components/PartnerGuide';
 import ReferralProcess from './components/ReferralProcess';
 import Press from './components/Press';
+import IndustryResources from './components/IndustryResources';
+import PartnerResources from './components/PartnerResources';
 
 function ScrollToHashElement() {
   const location = useLocation();
@@ -63,6 +64,7 @@ function App() {
             <Route path="/resources" element={<PartnerResources />} />
             <Route path="/partner-guide" element={<PartnerGuide />} />
             <Route path="/referral-process" element={<ReferralProcess />} />
+            <Route path="/industry-resources" element={<IndustryResources />} />
           </Routes>
         </main>
         <Footer />

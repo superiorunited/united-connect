@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { BookOpen, UserPlus } from 'lucide-react';
+import { BookOpen, UserPlus, Newspaper } from 'lucide-react';
 
 export default function PartnerResources() {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function PartnerResources() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {/* Partner Guide */}
           <div className="bg-white overflow-hidden shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
             <div className="p-8">
@@ -88,6 +88,32 @@ export default function PartnerResources() {
                   className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-300"
                 >
                   Submit Referral
+                  <svg className="ml-2 -mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Industry Resources */}
+          <div className="bg-white overflow-hidden shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="p-8">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-purple-100 mx-auto mb-6">
+                <Newspaper className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 text-center mb-4">
+                Industry Resources
+              </h3>
+              <p className="text-gray-600 text-center mb-6">
+                Stay informed with the latest automotive and manufacturing industry trends, news, and insights
+              </p>
+              <div className="flex justify-center">
+                <Link
+                  to="/industry-resources"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300"
+                >
+                  View Resources
                   <svg className="ml-2 -mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
