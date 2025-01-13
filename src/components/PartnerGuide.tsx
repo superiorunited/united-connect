@@ -337,7 +337,6 @@ export default function PartnerGuide() {
               <img src={apLogo} alt="AP Logo" className="h-24 w-auto object-contain" />
               <img src={avgLogo} alt="AVG Logo" className="h-12 w-auto object-contain" />
               <img src={epcLogo} alt="EPC Logo" className="h-12 w-auto object-contain" />
-              <img src={fLogo} alt="F Logo" className="h-12 w-auto object-contain" />
               <img src={intLogo} alt="INT Logo" className="h-12 w-auto object-contain" />
               <img src={lmLogo} alt="LM Logo" className="h-12 w-auto object-contain" />
               <img src={matLogo} alt="MAT Logo" className="h-12 w-auto object-contain" />
